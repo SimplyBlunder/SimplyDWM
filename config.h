@@ -122,7 +122,7 @@ static char *colors[][ColCount] = {
  */
 static char *tagicons[][NUMTAGS] =
 {
-	[DEFAULT_TAGS]        = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+	[DEFAULT_TAGS]        = { "", "", "", "󰙯", "", "", "󰓀", "", "󰈞"  },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
@@ -158,7 +158,9 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
-	RULE(.class = "Firefox", .tags = 1 << 7)
+	RULE(.class = "Firefox", .tags = 1 << 1)
+  RULE(.class = "Pavucontrol", .tags = 1 << 7)
+  RULE(.class = "discord", .tags = 1 << 3) 
 };
 
 
